@@ -3,240 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zhiwen Ruan - PhD Student at SUSTech">
-    <title>Zhiwen Ruan (阮智文)</title>
+    <meta name="description" content="Zhiwen Ruan (阮志文) - PhD Student at SUSTech">
+    <title>Zhiwen Ruan (阮志文) | SUSTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
+        :root {
+            --primary-color: #0056b3; /* 学术蓝 */
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --secondary-text: #666;
         }
-        h1, h2, h3 {
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        /* 头部信息区域 */
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .avatar-container {
+            flex: 0 0 150px;
+            margin-left: 30px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #eee; /* 如果没有图片显示灰色背景 */
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
             color: #2c3e50;
         }
-        h1 {
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
+        
+        h1 span {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-weight: normal;
+            margin-left: 10px;
         }
-        h2 {
-            margin-top: 30px;
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 5px;
-            font-size: 1.4em;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .header-info {
-            margin-bottom: 20px;
-        }
-        .contact-info {
-            font-size: 0.95em;
-        }
-        .edu-item, .pub-item, .honor-item {
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #555;
             margin-bottom: 15px;
         }
-        .pub-title {
-            font-weight: bold;
-            font-size: 1.05em;
-        }
-        .pub-authors {
+
+        .contact-links a {
             color: #555;
+            margin-right: 15px;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.95rem;
         }
-        .pub-venue {
-            font-style: italic;
-            color: #000;
+
+        .contact-links a:hover {
+            color: var(--primary-color);
         }
+
+        .contact-links i {
+            margin-right: 5px;
+        }
+
+        /* 章节通用样式 */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            display: inline-block;
+        }
+
+        /* 标签样式 (Interests) */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #e3f2fd;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* 论文列表样式 */
+        .pub-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #eee;
+            transition: border-color 0.3s;
+        }
+
+        .pub-item:hover {
+            border-left-color: var(--primary-color);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #222;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .pub-authors {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        /* 自动高亮你的名字 */
         .me {
-            font-weight: bold;
             color: #000;
+            font-weight: 700;
             text-decoration: underline;
         }
-        .tag {
+
+        .pub-venue {
+            font-style: italic;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        .pub-links {
+            margin-top: 5px;
+        }
+
+        .btn-link {
             display: inline-block;
-            background: #f1f8ff;
-            color: #0366d6;
-            padding: 2px 6px;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
             border-radius: 4px;
-            font-size: 0.85em;
+            text-decoration: none;
             margin-right: 5px;
-            border: 1px solid #c8e1ff;
+            transition: all 0.2s;
         }
-        .date {
-            float: right;
-            color: #666;
-            font-size: 0.9em;
+
+        .btn-link:hover {
+            background-color: var(--primary-color);
+            color: white;
         }
-        @media (max-width: 600px) {
-            .date {
-                float: none;
-                display: block;
-                margin-bottom: 2px;
+
+        /* 教育经历样式 */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .edu-details strong {
+            display: block;
+            font-size: 1.05rem;
+        }
+
+        .edu-date {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 0;
+                border-radius: 0;
+            }
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .avatar-container {
+                margin: 0 0 20px 0;
+            }
+            .edu-item {
+                flex-direction: column;
+            }
+            .edu-date {
+                margin-left: 0;
+                margin-top: 2px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Zhiwen Ruan (阮智文)</h1>
-        <div class="header-info">
-            <p><strong>PhD Student</strong><br>
-            Department of Statistics and Data Science<br>
-            Southern University of Science and Technology (SUSTech)</p>
-            
-            <div class="contact-info">
-                📍 Shenzhen, China <br>
-                📧 <a href="mailto:1434800673@qq.com">1434800673@qq.com</a> <br>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Zhiwen Ruan <span>阮志文</span></h1>
+                <div class="subtitle">
+                    PhD Student in Mathematics<br>
+                    Southern University of Science and Technology (SUSTech)
                 </div>
-        </div>
-    </header>
+                <div class="contact-links">
+                    <a href="mailto:1434800673@qq.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/zwRuan" target="_blank"><i class="fab fa-github"></i> Github</a>
+                    </div>
+            </div>
+            <div class="avatar-container">
+                <img src="avatar.jpg" alt="Zhiwen Ruan" class="avatar" onerror="this.style.display='none'">
+            </div>
+        </header>
 
-    <section>
-        <h2>Research Interests</h2>
-        <ul>
-            <li><strong>Reasoning LLM:</strong> Improve the reasoning ability of Large Language Models.</li>
-            <li><strong>Multimodal LLM:</strong> Focus on modeling the interaction between text and images.</li>
-        </ul>
-    </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a first-year Ph.D. student at the Department of Statistics and Data Science, Southern University of Science and Technology (SUSTech), supervised by Prof. Guanhua Chen.
+            </p>
+            <p>
+                My research interests lie in the intersection of <strong>Large Language Models (LLMs)</strong> and reasoning. Specifically, I am focusing on improving the reasoning capabilities of LLMs and exploring Multimodal LLMs.
+            </p>
+            <div class="tag-cloud">
+                <span class="tag">Reasoning LLM</span>
+                <span class="tag">Multimodal LLM</span>
+                <span class="tag">Data Distillation</span>
+                <span class="tag">Embodied AI</span>
+            </div>
+        </section>
 
-    <section>
-        <h2>Education</h2>
+        <section id="news">
+            <h2>News</h2>
+            <ul>
+                <li><strong>[2024.09]</strong> Enrolled in SUSTech as a Ph.D. student.</li>
+                </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            
+            <div class="pub-item">
+                <span class="pub-title">G2: Guided Generation for Enhanced Output Diversity in LLMs</span>
+                <div class="pub-authors">
+                    <span class="me">Zhiwen Ruan</span>, Yixia Li, Yefeng Liu, Yun Chen, Weihua Luo, Peng Li, Yang Liu, Guanhua Chen
+                </div>
+                <div class="pub-venue">EMNLP 2025 (CCF-B)</div>
+                <div class="pub-links">
+                    <a href="https://aclanthology.org/2025.emnlp-main.713/" class="btn-link" target="_blank">PDF</a>
+                    <a href="#" class="btn-link" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <span class="pub-title">LayAlign: Enhancing Multilingual Reasoning in Large Language Models via Layer-Wise Adaptive Fusion and Alignment Strategy</span>
+                <div class="pub-authors">
+                    <span class="me">Zhiwen Ruan</span>, Yixia Li, He Zhu, Longyue Wang, Weihua Luo, Kaifu Zhang, Yun Chen, Guanhua Chen
+                </div>
+                <div class="pub-venue">Findings of NAACL 2025</div>
+                <div class="pub-links">
+                    <a href="https://aclanthology.org/2025.findings-naacl.81/" class="btn-link" target="_blank">PDF</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <span class="pub-title">Enhancing Large Language Model Reasoning via Selective Critical Token Fine-Tuning</span>
+                <div class="pub-authors">
+                    <span class="me">Zhiwen Ruan</span>, Yixia Li, He Zhu, Yun Chen, Peng Li, Yang Liu, Guanhua Chen
+                </div>
+                <div class="pub-venue">arXiv preprint (2025)</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2510.10974" class="btn-link" target="_blank">arXiv</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <span class="pub-title">Unveiling Over-Memorization in Finetuning LLMs for Reasoning Tasks</span>
+                <div class="pub-authors">
+                    <span class="me">Zhiwen Ruan</span>, Yun Chen, Yutao Hou, Peng Li, Yang Liu, Guanhua Chen
+                </div>
+                <div class="pub-venue">arXiv preprint (2025)</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2508.04117" class="btn-link" target="_blank">arXiv</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <span class="pub-title">Tag-Instruct: Controlled Instruction Complexity Enhancement through Structure-based Augmentation</span>
+                <div class="pub-authors">
+                    He Zhu, <span class="me">Zhiwen Ruan</span>, Junyou Su, Xingwei He, Yun Chen, Wenjia Zhang, Guanhua Chen
+                </div>
+                <div class="pub-venue">Findings of ACL 2025</div>
+                <div class="pub-links">
+                    <a href="https://aclanthology.org/2025.findings-acl.911/" class="btn-link" target="_blank">PDF</a>
+                </div>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-title">A Precise Crop Row Detection Algorithm in Complex Farmland for Unmanned Agricultural Machines</span>
+                <div class="pub-authors">
+                    <span class="me">Zhiwen Ruan</span>, Penghao Chang, Shangqing Cui, Jiaqi Luo, Rui Gao, Zhongbin Su
+                </div>
+                <div class="pub-venue">Biosystems Engineering (SCI Q1), 2023</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.1016/j.biosystemseng.2023.06.010" class="btn-link" target="_blank">DOI</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="edu-item">
+                <div class="edu-details">
+                    <strong>Southern University of Science and Technology (SUSTech)</strong>
+                    <span>Ph.D. in Mathematics</span>
+                </div>
+                <div class="edu-date">Sept 2024 – Present</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-details">
+                    <strong>Northeast Agricultural University (NEAU)</strong>
+                    <span>M.S. in Computer Science and Technology (211)</span>
+                </div>
+                <div class="edu-date">Sept 2021 – May 2024</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-details">
+                    <strong>Guizhou University of Finance and Economics</strong>
+                    <span>B.S. in Computer Science and Technology</span>
+                </div>
+                <div class="edu-date">Sept 2017 – May 2021</div>
+            </div>
+        </section>
         
-        <div class="edu-item">
-            <span class="date">Sept 2024 – Present</span>
-            <strong>Southern University of Science and Technology (SUSTech)</strong><br>
-            PhD student in Mathematics<br>
-            <em>Supervisor: Guanhua Chen</em>
-        </div>
+        <section id="awards">
+            <h2>Honors & Awards</h2>
+            <ul>
+                <li><strong>2022:</strong> Second Prize, HUAWEI CUP National Undergraduate IOT Design Contest (Northeastern China Division)</li>
+                <li><strong>2022:</strong> Third Prize, 17th China Postgraduate Electronic Design Competition (Northeast Division)</li>
+            </ul>
+        </section>
 
-        <div class="edu-item">
-            <span class="date">Sept 2021 – May 2024</span>
-            <strong>Northeast Agricultural University (211)</strong><br>
-            M.S. in Computer Science and Technology<br>
-            <em>Supervisor: Zhongbin Su</em>
-        </div>
-
-        <div class="edu-item">
-            <span class="date">Sept 2017 – May 2021</span>
-            <strong>Guizhou University of Finance and Economics</strong><br>
-            B.S. in Computer Science and Technology
-        </div>
-    </section>
-
-    <section>
-        <h2>Publications</h2>
-        
-        <div class="pub-item">
-            <div class="pub-title">G2: Guided Generation for Enhanced Output Diversity in LLMs</div>
-            <div class="pub-authors">
-                <span class="me">Zhiwen Ruan</span>, Yixia Li, Yefeng Liu, Yun Chen, Weihua Luo, Peng Li, Yang Liu, Guanhua Chen
-            </div>
-            <div class="pub-venue">EMNLP 2025 (CCF-B)</div>
-            <a href="https://aclanthology.org/2025.emnlp-main.713/" target="_blank">[Paper]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">LayAlign: Enhancing Multilingual Reasoning in Large Language Models via Layer-Wise Adaptive Fusion and Alignment Strategy</div>
-            <div class="pub-authors">
-                <span class="me">Zhiwen Ruan</span>, Yixia Li, He Zhu, Longyue Wang, Weihua Luo, Kaifu Zhang, Yun Chen, Guanhua Chen
-            </div>
-            <div class="pub-venue">Findings of NAACL 2025</div>
-            <a href="https://aclanthology.org/2025.findings-naacl.81/" target="_blank">[Paper]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">Enhancing Large Language Model Reasoning via Selective Critical Token Fine-Tuning</div>
-            <div class="pub-authors">
-                <span class="me">Zhiwen Ruan</span>, Yixia Li, He Zhu, Yun Chen, Peng Li, Yang Liu, Guanhua Chen
-            </div>
-            <div class="pub-venue">arXiv preprint (2025)</div>
-            <a href="https://arxiv.org/abs/2510.10974" target="_blank">[arXiv:2510.10974]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">Unveiling Over-Memorization in Finetuning LLMs for Reasoning Tasks</div>
-            <div class="pub-authors">
-                <span class="me">Zhiwen Ruan</span>, Yun Chen, Yutao Hou, Peng Li, Yang Liu, Guanhua Chen
-            </div>
-            <div class="pub-venue">arXiv preprint (2025)</div>
-            <a href="https://arxiv.org/abs/2508.04117" target="_blank">[arXiv:2508.04117]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">Tag-Instruct: Controlled Instruction Complexity Enhancement through Structure-based Augmentation</div>
-            <div class="pub-authors">
-                He Zhu, <span class="me">Zhiwen Ruan</span>, Junyou Su, Xingwei He, Yun Chen, Wenjia Zhang, Guanhua Chen
-            </div>
-            <div class="pub-venue">Findings of ACL 2025</div>
-            <a href="https://aclanthology.org/2025.findings-acl.911/" target="_blank">[Paper]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">FANNO: Augmenting High-Quality Instruction Data with Open-Sourced LLMs Only</div>
-            <div class="pub-authors">
-                He Zhu, Yifan Ding, Yicheng Tao, <span class="me">Zhiwen Ruan</span>, Yixia Li, Wenjia Zhang, Yun Chen, Guanhua Chen
-            </div>
-            <div class="pub-venue">Findings of ACL 2025</div>
-            <a href="https://aclanthology.org/2025.findings-acl.906/" target="_blank">[Paper]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">Compound-QA: A Benchmark for Evaluating LLMs on Compound Questions</div>
-            <div class="pub-authors">
-                Yutao Hou, Yajing Luo, <span class="me">Zhiwen Ruan</span>, Hongru Wang, Weifeng Ge, Yun Chen, Guanhua Chen
-            </div>
-            <div class="pub-venue">arXiv preprint (2024)</div>
-            <a href="https://arxiv.org/abs/2411.10163" target="_blank">[arXiv:2411.10163]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">A Precise Crop Row Detection Algorithm in Complex Farmland for Unmanned Agricultural Machines</div>
-            <div class="pub-authors">
-                <span class="me">Zhiwen Ruan</span>, Penghao Chang, Shangqing Cui, Jiaqi Luo, Rui Gao, Zhongbin Su
-            </div>
-            <div class="pub-venue">Biosystems Engineering (SCI Q1 Top), 2023</div>
-            <a href="https://doi.org/10.1016/j.biosystemseng.2023.06.010" target="_blank">[DOI]</a>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-title">Real-Time Detection of Seedling Maize Weeds in Sustainable Agriculture</div>
-            <div class="pub-authors">
-                Siqi Liu, Yishu Jin, <span class="me">Zhiwen Ruan</span>, Zheng Ma, Rui Gao, Zhongbin Su
-            </div>
-            <div class="pub-venue">Sustainability (SCI Q2), 2022</div>
-            <a href="https://doi.org/10.3390/su142215088" target="_blank">[DOI]</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>Honors & Awards</h2>
-        <div class="honor-item">
-            <span class="date">Aug 2022</span>
-            <strong>Second Prize</strong>, 2022 HUAWEI CUP National Undergraduate IOT Design Contest (Northeastern China Division)
-        </div>
-        <div class="honor-item">
-            <span class="date">Jul 2022</span>
-            <strong>Third Prize</strong>, 17th China Postgraduate Electronic Design Competition (Northeast Division)
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <p><strong>Programming Languages:</strong> <span class="tag">Python</span> <span class="tag">Java</span> <span class="tag">C</span></p>
-    </section>
-
-    <footer style="margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.8em; color: #777;">
-        <p>&copy; 2026 Zhiwen Ruan. Hosted on GitHub Pages.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Zhiwen Ruan (阮志文). Powered by GitHub Pages.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
