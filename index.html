@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zhiwen Ruan (阮志文) - PhD Student at SUSTech">
+    <meta name="description" content="Zhiwen Ruan (阮志文) - Ph.D. Candidate at SUSTech">
     <title>Zhiwen Ruan (阮志文) | SUSTech</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,7 +26,6 @@
             padding: 0;
         }
 
-        /* 布局容器 */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -36,7 +35,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        /* 头部信息区域 */
         header {
             display: flex;
             align-items: center;
@@ -62,7 +60,7 @@
             object-fit: cover;
             border: 3px solid #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            background-color: #eee; /* 如果没有图片显示灰色背景 */
+            background-color: #eee;
         }
 
         h1 {
@@ -84,6 +82,17 @@
             margin-bottom: 15px;
         }
 
+        .status-badge {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
         .contact-links a {
             color: #555;
             margin-right: 15px;
@@ -96,11 +105,6 @@
             color: var(--primary-color);
         }
 
-        .contact-links i {
-            margin-right: 5px;
-        }
-
-        /* 章节通用样式 */
         section {
             margin-bottom: 40px;
         }
@@ -114,7 +118,6 @@
             display: inline-block;
         }
 
-        /* 标签样式 (Interests) */
         .tag-cloud {
             display: flex;
             flex-wrap: wrap;
@@ -130,7 +133,6 @@
             font-weight: 500;
         }
 
-        /* 论文列表样式 */
         .pub-item {
             margin-bottom: 20px;
             padding-left: 15px;
@@ -156,7 +158,6 @@
             margin-bottom: 4px;
         }
 
-        /* 自动高亮你的名字 */
         .me {
             color: #000;
             font-weight: 700;
@@ -190,26 +191,44 @@
             color: white;
         }
 
-        /* 教育经历样式 */
-        .edu-item {
+        /* 教育经历与实习通用样式 */
+        .exp-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 15px;
+        }
+        
+        .exp-item:last-child {
+            border-bottom: none;
         }
 
-        .edu-details strong {
+        .exp-details strong {
             display: block;
             font-size: 1.05rem;
+            color: #222;
+        }
+        
+        .exp-details .role {
+            color: #444;
+            font-weight: 500;
+        }
+        
+        .exp-details .desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
         }
 
-        .edu-date {
+        .exp-date {
             color: var(--secondary-text);
             font-size: 0.9rem;
             white-space: nowrap;
             margin-left: 20px;
+            text-align: right;
         }
 
-        /* 页脚 */
         footer {
             text-align: center;
             font-size: 0.85rem;
@@ -219,7 +238,6 @@
             border-top: 1px solid #eee;
         }
 
-        /* 移动端适配 */
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -233,12 +251,13 @@
             .avatar-container {
                 margin: 0 0 20px 0;
             }
-            .edu-item {
+            .exp-item {
                 flex-direction: column;
             }
-            .edu-date {
+            .exp-date {
                 margin-left: 0;
-                margin-top: 2px;
+                margin-top: 4px;
+                text-align: left;
             }
         }
     </style>
@@ -250,40 +269,49 @@
             <div class="header-content">
                 <h1>Zhiwen Ruan <span>阮志文</span></h1>
                 <div class="subtitle">
-                    PhD Student in Mathematics<br>
+                    Ph.D. Candidate in Control Science and Engineering<br>
                     Southern University of Science and Technology (SUSTech)
                 </div>
-                <div class="contact-links">
+                <div class="status-badge">
+                    <i class="fas fa-check-circle"></i> Proposal Defense Passed
+                </div>
+                
+                <div class="contact-links" style="margin-top: 15px;">
                     <a href="mailto:1434800673@qq.com"><i class="fas fa-envelope"></i> Email</a>
                     <a href="https://github.com/zwRuan" target="_blank"><i class="fab fa-github"></i> Github</a>
                     </div>
             </div>
             <div class="avatar-container">
-                <img src="avatar.jpg" alt="Zhiwen Ruan" class="avatar" onerror="this.style.display='none'">
+                <img src="avatar.jpg" alt="Zhiwen Ruan" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Zhiwen+Ruan&background=0D8ABC&color=fff&size=150'">
             </div>
         </header>
 
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am a first-year Ph.D. student at the Department of Statistics and Data Science, Southern University of Science and Technology (SUSTech), supervised by Prof. Guanhua Chen.
+                I am a second-year <strong>Ph.D. Candidate</strong> at Southern University of Science and Technology (SUSTech), majoring in <strong>Control Science and Engineering</strong>. I am supervised by Prof. Guanhua Chen.
             </p>
             <p>
-                My research interests lie in the intersection of <strong>Large Language Models (LLMs)</strong> and reasoning. Specifically, I am focusing on improving the reasoning capabilities of LLMs and exploring Multimodal LLMs.
+                Currently, I am also working as an <strong>Algorithm Intern</strong> at <strong>Alibaba Group (AI Business)</strong>. My research interests lie in the intersection of Large Language Models (LLMs), Reasoning, and Embodied AI.
             </p>
             <div class="tag-cloud">
                 <span class="tag">Reasoning LLM</span>
+                <span class="tag">Control Science</span>
                 <span class="tag">Multimodal LLM</span>
-                <span class="tag">Data Distillation</span>
                 <span class="tag">Embodied AI</span>
             </div>
         </section>
 
-        <section id="news">
-            <h2>News</h2>
-            <ul>
-                <li><strong>[2024.09]</strong> Enrolled in SUSTech as a Ph.D. student.</li>
-                </ul>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="exp-item">
+                <div class="exp-details">
+                    <strong>Alibaba Group (AI Business)</strong>
+                    <div class="role">Algorithm Intern</div>
+                    <div class="desc">Working on advanced algorithms for AI business applications.</div>
+                </div>
+                <div class="exp-date">Dec 2024 – Present</div>
+            </div>
         </section>
 
         <section id="publications">
@@ -297,7 +325,6 @@
                 <div class="pub-venue">EMNLP 2025 (CCF-B)</div>
                 <div class="pub-links">
                     <a href="https://aclanthology.org/2025.emnlp-main.713/" class="btn-link" target="_blank">PDF</a>
-                    <a href="#" class="btn-link" target="_blank">Code</a>
                 </div>
             </div>
 
@@ -322,7 +349,7 @@
                     <a href="https://arxiv.org/abs/2510.10974" class="btn-link" target="_blank">arXiv</a>
                 </div>
             </div>
-
+            
             <div class="pub-item">
                 <span class="pub-title">Unveiling Over-Memorization in Finetuning LLMs for Reasoning Tasks</span>
                 <div class="pub-authors">
@@ -333,56 +360,34 @@
                     <a href="https://arxiv.org/abs/2508.04117" class="btn-link" target="_blank">arXiv</a>
                 </div>
             </div>
-
-            <div class="pub-item">
-                <span class="pub-title">Tag-Instruct: Controlled Instruction Complexity Enhancement through Structure-based Augmentation</span>
-                <div class="pub-authors">
-                    He Zhu, <span class="me">Zhiwen Ruan</span>, Junyou Su, Xingwei He, Yun Chen, Wenjia Zhang, Guanhua Chen
-                </div>
-                <div class="pub-venue">Findings of ACL 2025</div>
-                <div class="pub-links">
-                    <a href="https://aclanthology.org/2025.findings-acl.911/" class="btn-link" target="_blank">PDF</a>
-                </div>
-            </div>
-            
-            <div class="pub-item">
-                <span class="pub-title">A Precise Crop Row Detection Algorithm in Complex Farmland for Unmanned Agricultural Machines</span>
-                <div class="pub-authors">
-                    <span class="me">Zhiwen Ruan</span>, Penghao Chang, Shangqing Cui, Jiaqi Luo, Rui Gao, Zhongbin Su
-                </div>
-                <div class="pub-venue">Biosystems Engineering (SCI Q1), 2023</div>
-                <div class="pub-links">
-                    <a href="https://doi.org/10.1016/j.biosystemseng.2023.06.010" class="btn-link" target="_blank">DOI</a>
-                </div>
-            </div>
-
         </section>
 
         <section id="education">
             <h2>Education</h2>
             
-            <div class="edu-item">
-                <div class="edu-details">
+            <div class="exp-item">
+                <div class="exp-details">
                     <strong>Southern University of Science and Technology (SUSTech)</strong>
-                    <span>Ph.D. in Mathematics</span>
+                    <div class="role">Ph.D. Candidate in Control Science and Engineering</div>
+                    <div class="desc">Supervisor: Guanhua Chen</div>
                 </div>
-                <div class="edu-date">Sept 2024 – Present</div>
+                <div class="exp-date">Sept 2024 – Present</div>
             </div>
 
-            <div class="edu-item">
-                <div class="edu-details">
+            <div class="exp-item">
+                <div class="exp-details">
                     <strong>Northeast Agricultural University (NEAU)</strong>
-                    <span>M.S. in Computer Science and Technology (211)</span>
+                    <div class="role">M.S. in Computer Science and Technology</div>
                 </div>
-                <div class="edu-date">Sept 2021 – May 2024</div>
+                <div class="exp-date">Sept 2021 – May 2024</div>
             </div>
 
-            <div class="edu-item">
-                <div class="edu-details">
+            <div class="exp-item">
+                <div class="exp-details">
                     <strong>Guizhou University of Finance and Economics</strong>
-                    <span>B.S. in Computer Science and Technology</span>
+                    <div class="role">B.S. in Computer Science and Technology</div>
                 </div>
-                <div class="edu-date">Sept 2017 – May 2021</div>
+                <div class="exp-date">Sept 2017 – May 2021</div>
             </div>
         </section>
         
@@ -395,7 +400,7 @@
         </section>
 
         <footer>
-            <p>&copy; 2026 Zhiwen Ruan (阮志文). Powered by GitHub Pages.</p>
+            <p>&copy; 2026 Zhiwen Ruan. Powered by GitHub Pages.</p>
         </footer>
     </div>
 
