@@ -91,7 +91,7 @@
   <div class="paper-content">
     <div class="paper-title">Tag-Instruct: Controlled Instruction Complexity Enhancement through Structure-based Augmentation</div>
     <div class="paper-authors">He Zhu, <strong>Zhiwen Ruan</strong>, Junyou Su, Xingwei He, Yun Chen, Wenjia Zhang<sup>*</sup>, Guanhua Chen<sup>*</sup>.</div>
-    <div class="paper-meta"><span class="conf-badge">Findings of NAACL 2025</span><span class="paper-status">Long Paper</span></div>
+    <div class="paper-meta"><span class="conf-badge">Findings of ACL 2025</span><span class="paper-status">Long Paper</span></div>
     <div class="paper-links">
       <a href="https://aclanthology.org/2025.findings-acl.911/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
       <a href="https://github.com/sustech-nlp/Tag-Instruct" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
@@ -104,7 +104,7 @@
   <div class="paper-content">
     <div class="paper-title">LayAlign: Enhancing Multilingual Reasoning in Large Language Models via Layer-Wise Adaptive Fusion and Alignment Strategy</div>
     <div class="paper-authors"><strong>Zhiwen Ruan<sup>*</sup></strong>, Yixia Li<sup>*</sup>, He Zhu, Longyue Wang, Weihua Luo, Kaifu Zhang, Yun Chen, Guanhua Chen</div>
-    <div class="paper-meta"><span class="conf-badge">Findings of ACL 2025</span><span class="paper-status">Long Paper</span></div>
+    <div class="paper-meta"><span class="conf-badge">Findings of NAACL 2025</span><span class="paper-status">Long Paper</span></div>
     <div class="paper-links">
       <a href="https://aclanthology.org/2025.findings-naacl.81/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
       <a href="https://github.com/zwRuan/LayAlign" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
