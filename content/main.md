@@ -18,7 +18,7 @@
   <li><span class="modern-list-date">2026.01</span><span class="modern-list-content">Joined Alibaba Cloud as a <strong>Research Intern</strong>.</span></li>
   <li><span class="modern-list-date">2025.11</span><span class="modern-list-content"><em>G2</em> was accepted to <strong>Main of EMNLP 2025</strong> (CCF-B, THU-A).</span></li>
   <li><span class="modern-list-date">2025.07</span><span class="modern-list-content">Two papers, <em>FANNO</em> and <em>Tag-Instruct</em>, were accepted to <strong>Findings of ACL 2025</strong> as long papers.</span></li>
-  <li><span class="modern-list-date">2025.04</span><span class="modern-list-content"><em>LayAlign</em> was accepted to <strong>NAACL 2025 Findings</strong>.</span></li>
+  <li><span class="modern-list-date">2025.04</span><span class="modern-list-content"><em>LayAlign</em> was accepted to <strong>Findings of NAACL 2025</strong>.</span></li>
   <li><span class="modern-list-date">2024.12</span><span class="modern-list-content">Joined Alibaba IDC as a <strong>Research Intern</strong>.</span></li>
 </ul>
 
@@ -78,7 +78,7 @@
   <div class="paper-content">
     <div class="paper-title">Fanno: Augmenting High-Quality Instruction Data with Open-Sourced LLMs Only</div>
     <div class="paper-authors">He Zhu, Yifan Ding, Yicheng Tao, <strong>Zhiwen Ruan</strong>, Yixia Li, Wenjia Zhang, Yun Chen, Guanhua Chen<sup>*</sup>.</div>
-    <div class="paper-meta"><span class="conf-badge">Findings of ACL 2025</span><span class="paper-status">Long Paper</span></div>
+    <div class="paper-meta"><span class="conf-badge">Findings of NAACL 2025</span><span class="paper-status">Long Paper</span></div>
     <div class="paper-links">
       <a href="https://aclanthology.org/2025.findings-acl.906/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
       <a href="https://github.com/sustech-nlp/FANNO" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
