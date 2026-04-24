@@ -1,394 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zhiwen Ruan (阮志文) - Ph.D. Candidate at SUSTech">
-    <title>Zhiwen Ruan (阮志文) | SUSTech</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-color: #0056b3; /* 学术蓝 */
-            --text-color: #333;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --secondary-text: #666;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhiwen Ruan (阮志文)</title>
+  <meta name="description" content="Zhiwen Ruan personal homepage.">
+  <style>
+    :root {
+      --primary-text: #111827;
+      --secondary-text: #4b5563;
+      --accent-color: #be185d;
+      --accent-bg: #fdf2f8;
+      --border-color: #f0f0f0;
+      --bg-soft: #f7f8fc;
+      --card-bg: #ffffff;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 16px 28px;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: var(--secondary-text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 10% 10%, #fdf2f8 0%, rgba(253, 242, 248, 0) 35%),
+        radial-gradient(circle at 90% 20%, #eef2ff 0%, rgba(238, 242, 255, 0) 30%),
+        var(--bg-soft);
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
+    .layout {
+      display: block;
+    }
 
-        header {
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
+    .sidebar-nav {
+      position: fixed;
+      left: clamp(
+        16px,
+        calc(((((100vw - min(100vw, 1200px)) / 2) + ((min(100vw, 1200px) - 1040px) / 2) + 56px - 220px) / 2) - 36px),
+        220px
+      );
+      top: 50vh;
+      transform: translateY(-50%);
+      width: 220px;
+      border: 1px solid #e9d5ff;
+      border-radius: 14px;
+      padding: 14px 12px;
+      background: linear-gradient(180deg, #faf5ff 0%, #f5f3ff 100%);
+      box-shadow: 0 6px 18px rgba(88, 28, 135, 0.08);
+      text-align: center;
+      z-index: 10;
+    }
 
-        .header-content {
-            flex: 1;
-        }
+    .sidebar-title {
+      margin: 0 0 10px;
+      font-size: 0.78rem;
+      color: #7c3aed;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-        .avatar-container {
-            flex: 0 0 150px;
-            margin-left: 30px;
-            text-align: center;
-        }
+    .sidebar-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            background-color: #eee;
-        }
+    .sidebar-nav li {
+      margin: 0 0 6px;
+    }
 
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2rem;
-            color: #2c3e50;
-        }
-        
-        h1 span {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            font-weight: normal;
-            margin-left: 10px;
-        }
+    .sidebar-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 160px;
+      padding: 6px 10px;
+      color: #4b5563;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+      text-decoration: none;
+    }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
+    .sidebar-nav a:hover,
+    .sidebar-nav a.active {
+      color: #9d174d;
+      background: #fdf2f8;
+      border-color: #fbcfe8;
+    }
 
-        .contact-links a {
-            color: #555;
-            margin-right: 15px;
-            text-decoration: none;
-            transition: color 0.2s;
-            font-size: 0.95rem;
-        }
+    .content {
+      min-width: 0;
+      max-width: 1040px;
+      margin: 0 auto;
+      transform: translateX(56px);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid #eceff3;
+      border-radius: 16px;
+      padding: 14px 16px 10px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+    }
 
-        .contact-links a:hover {
-            color: var(--primary-color);
-        }
+    .profile-header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-        section {
-            margin-bottom: 40px;
-        }
+    .profile-avatar {
+      width: 92px;
+      height: 92px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #e5e7eb;
+      flex-shrink: 0;
+    }
 
-        h2 {
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            display: inline-block;
-        }
+    .profile-name {
+      margin: 0;
+      line-height: 1.2;
+      color: var(--primary-text);
+    }
 
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+    .profile-role {
+      margin: 5px 0 4px;
+      color: var(--secondary-text);
+      font-weight: 600;
+    }
 
-        .tag {
-            background-color: #e3f2fd;
-            color: var(--primary-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+    .profile-research {
+      margin: 0 0 4px;
+      color: #6b7280;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
 
-        .pub-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 3px solid #eee;
-            transition: border-color 0.3s;
-        }
+    .label-strong {
+      font-weight: 600;
+      color: var(--primary-text);
+    }
 
-        .pub-item:hover {
-            border-left-color: var(--primary-color);
-        }
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
 
-        .pub-title {
-            font-weight: 600;
-            font-size: 1.05rem;
-            color: #222;
-            display: block;
-            margin-bottom: 4px;
-        }
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: 1px solid #d8e0ea;
+      background: #fff;
+      color: #334155;
+      text-decoration: none;
+    }
 
-        .pub-authors {
-            color: var(--secondary-text);
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
+    .quick-link:hover {
+      border-color: #f3bfdc;
+      background: #fdf2f8;
+      color: #9d174d;
+      text-decoration: none;
+    }
 
-        .me {
-            color: #000;
-            font-weight: 700;
-            text-decoration: underline;
-        }
+    h1, h2, h3 {
+      color: var(--primary-text);
+      font-weight: 700;
+    }
 
-        .pub-venue {
-            font-style: italic;
-            color: #444;
-            font-size: 0.95rem;
-        }
+    .section-title {
+      border-left: 4px solid #e879c2;
+      border-bottom: 1px solid #f3e8f5;
+      padding: 2px 0 6px 10px;
+      margin-top: 32px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        .pub-links {
-            margin-top: 5px;
-        }
+    .lead {
+      font-size: 0.92rem;
+      color: #374151;
+      margin-top: 10px;
+    }
 
-        .btn-link {
-            display: inline-block;
-            font-size: 0.8rem;
-            padding: 2px 8px;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            border-radius: 4px;
-            text-decoration: none;
-            margin-right: 5px;
-            transition: all 0.2s;
-        }
+    .modern-list {
+      list-style: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
 
-        .btn-link:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
+    .modern-list li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+      color: var(--secondary-text);
+    }
 
-        /* 教育经历与实习通用样式 */
-        .exp-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            border-bottom: 1px dashed #eee;
-            padding-bottom: 15px;
-        }
-        
-        .exp-item:last-child {
-            border-bottom: none;
-        }
+    .modern-list-date {
+      display: inline-block;
+      font-weight: 600;
+      color: var(--accent-color);
+      font-size: 0.88rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      margin-right: 8px;
+    }
 
-        .exp-details strong {
-            display: block;
-            font-size: 1.05rem;
-            color: #222;
-        }
-        
-        .exp-details .role {
-            color: #444;
-            font-weight: 500;
-        }
-        
-        .exp-details .desc {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 5px;
-        }
+    .exp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-        .exp-date {
-            color: var(--secondary-text);
-            font-size: 0.9rem;
-            white-space: nowrap;
-            margin-left: 20px;
-            text-align: right;
-        }
+    .exp-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      transform: translateY(-2px);
+      border-color: #e5e7eb;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            color: #888;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 0;
-                border-radius: 0;
-            }
-            header {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .avatar-container {
-                margin: 0 0 20px 0;
-            }
-            .exp-item {
-                flex-direction: column;
-            }
-            .exp-date {
-                margin-left: 0;
-                margin-top: 4px;
-                text-align: left;
-            }
-        }
-    </style>
+    .exp-title {
+      font-size: 1.03rem;
+      font-weight: 700;
+      color: var(--primary-text);
+    }
+
+    .exp-date {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      background: var(--accent-bg);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .exp-org {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+    }
+
+    .exp-desc {
+      font-size: 0.88rem;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-top: 4px;
+    }
+
+    .paper-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      gap: 16px;
+    }
+
+    .paper-card:hover {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+      border-color: #e5e7eb;
+    }
+
+    .paper-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .paper-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      line-height: 1.4;
+    }
+
+    .paper-authors {
+      font-size: 0.86rem;
+      color: var(--secondary-text);
+      line-height: 1.6;
+    }
+
+    .paper-authors strong {
+      color: var(--primary-text);
+      font-weight: 600;
+    }
+
+    .paper-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 2px;
+    }
+
+    .conf-badge {
+      background: var(--accent-bg);
+      color: var(--accent-color);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .paper-links {
+      margin-top: 4px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .paper-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #374151;
+      text-decoration: none;
+      background: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .paper-btn:hover {
+      background: var(--accent-bg);
+      border-color: #fbcfe8;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .paper-btn-primary {
+      background: #111827;
+      border-color: #111827;
+      color: #ffffff;
+    }
+
+    .paper-btn-primary:hover {
+      background: #1f2937;
+      border-color: #1f2937;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .paper-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      .sidebar-nav {
+        display: none;
+      }
+
+      .content {
+        max-width: 1040px;
+        transform: none;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="layout">
+    <aside class="sidebar-nav">
+      <p class="sidebar-title">Navigate</p>
+      <ul>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#research-interests">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#educations">Educations</a></li>
+        <li><a href="#honors">Honors</a></li>
+      </ul>
+    </aside>
 
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1>Zhiwen Ruan <span>阮志文</span></h1>
-                <div class="subtitle">
-                    Ph.D. Candidate in Control Science and Engineering<br>
-                    Southern University of Science and Technology (SUSTech)
-                </div>
-                
-                <div class="contact-links" style="margin-top: 15px;">
-                    <a href="mailto:1434800673@qq.com"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://github.com/zwRuan" target="_blank"><i class="fab fa-github"></i> Github</a>
-                    </div>
-            </div>
-            <div class="avatar-container">
-                <img src="image.jpg" alt="Zhiwen Ruan" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Zhiwen+Ruan&background=0D8ABC&color=fff&size=150'">
-            </div>
-        </header>
+    <main class="content">
+      <header class="profile-header">
+        <img class="profile-avatar" src="image.jpg" alt="Zhiwen Ruan avatar" onerror="this.src='https://ui-avatars.com/api/?name=Zhiwen+Ruan&background=0D8ABC&color=fff&size=150'">
+        <div>
+          <h1 class="profile-name">Zhiwen Ruan (阮志文)</h1>
+          <p class="profile-role">Ph.D. Candidate at SUSTech</p>
+          <p class="profile-research"><span class="label-strong">Research:</span> Reasoning LLM · Multimodal LLM · Embodied AI · Control Science</p>
+          <div class="quick-links">
+            <a class="quick-link" href="mailto:1434800673@qq.com">Email</a>
+            <a class="quick-link" href="https://github.com/zwRuan" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="quick-link" href="#publications">Publications</a>
+          </div>
+        </div>
+      </header>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a second-year <strong>Ph.D. Candidate</strong> at Southern University of Science and Technology (SUSTech), majoring in <strong>Control Science and Engineering</strong>. I am supervised by Prof. Guanhua Chen.
-            </p>
-            <p>
-                Currently, I am also working as an <strong>Algorithm Intern</strong> at <strong>Alibaba Group</strong>. My research interests lie in the intersection of Large Language Models (LLMs), Reasoning, and Embodied AI.
-            </p>
-            <div class="tag-cloud">
-                <span class="tag">Reasoning LLM</span>
-                <span class="tag">Control Science</span>
-                <span class="tag">Multimodal LLM</span>
-                <span class="tag">Embodied AI</span>
-            </div>
-        </section>
+      <div id="main-content"></div>
+    </main>
+  </div>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="exp-item">
-                <div class="exp-details">
-                    <strong>Alibaba Group</strong>
-                    <div class="role">Algorithm Intern</div>
-                    <div class="desc">Working on LLMs.</div>
-                </div>
-                <div class="exp-date">Dec 2024 – Present</div>
-            </div>
-        </section>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    function initNavObserver() {
+      const navLinks = Array.from(document.querySelectorAll(".sidebar-nav a"));
+      const sectionMap = new Map(
+        navLinks.map((link) => [link.getAttribute("href"), link])
+      );
+      const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
 
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            
-            <div class="pub-item">
-                <span class="pub-title">G2: Guided Generation for Enhanced Output Diversity in LLMs</span>
-                <div class="pub-authors">
-                    <span class="me">Zhiwen Ruan</span>, Yixia Li, Yefeng Liu, Yun Chen, Weihua Luo, Peng Li, Yang Liu, Guanhua Chen
-                </div>
-                <div class="pub-venue">EMNLP 2025 (CCF-B)</div>
-                <div class="pub-links">
-                    <a href="https://aclanthology.org/2025.emnlp-main.713/" class="btn-link" target="_blank">PDF</a>
-                </div>
-            </div>
+      if (sections.length === 0) return;
 
-            <div class="pub-item">
-                <span class="pub-title">LayAlign: Enhancing Multilingual Reasoning in Large Language Models via Layer-Wise Adaptive Fusion and Alignment Strategy</span>
-                <div class="pub-authors">
-                    <span class="me">Zhiwen Ruan</span>, Yixia Li, He Zhu, Longyue Wang, Weihua Luo, Kaifu Zhang, Yun Chen, Guanhua Chen
-                </div>
-                <div class="pub-venue">Findings of NAACL 2025</div>
-                <div class="pub-links">
-                    <a href="https://aclanthology.org/2025.findings-naacl.81/" class="btn-link" target="_blank">PDF</a>
-                </div>
-            </div>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (!visible) return;
 
-            <div class="pub-item">
-                <span class="pub-title">Enhancing Large Language Model Reasoning via Selective Critical Token Fine-Tuning</span>
-                <div class="pub-authors">
-                    <span class="me">Zhiwen Ruan</span>, Yixia Li, He Zhu, Yun Chen, Peng Li, Yang Liu, Guanhua Chen
-                </div>
-                <div class="pub-venue">arXiv preprint (2025)</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2510.10974" class="btn-link" target="_blank">arXiv</a>
-                </div>
-            </div>
-            
-            <div class="pub-item">
-                <span class="pub-title">Unveiling Over-Memorization in Finetuning LLMs for Reasoning Tasks</span>
-                <div class="pub-authors">
-                    <span class="me">Zhiwen Ruan</span>, Yun Chen, Yutao Hou, Peng Li, Yang Liu, Guanhua Chen
-                </div>
-                <div class="pub-venue">arXiv preprint (2025)</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2508.04117" class="btn-link" target="_blank">arXiv</a>
-                </div>
-            </div>
-        </section>
+          navLinks.forEach((link) => link.classList.remove("active"));
+          const activeLink = sectionMap.get("#" + visible.target.id);
+          if (activeLink) activeLink.classList.add("active");
+        },
+        { rootMargin: "-30% 0px -55% 0px", threshold: [0.15, 0.4, 0.7] }
+      );
 
-        <section id="education">
-            <h2>Education</h2>
-            
-            <div class="exp-item">
-                <div class="exp-details">
-                    <strong>Southern University of Science and Technology (SUSTech)</strong>
-                    <div class="role">Ph.D. Candidate in Control Science and Engineering</div>
-                    <div class="desc">Supervisor: Guanhua Chen</div>
-                </div>
-                <div class="exp-date">Sept 2024 – Present</div>
-            </div>
+      sections.forEach((section) => observer.observe(section));
+    }
 
-            <div class="exp-item">
-                <div class="exp-details">
-                    <strong>Northeast Agricultural University (NEAU)</strong>
-                    <div class="role">M.S. in Computer Science and Technology</div>
-                </div>
-                <div class="exp-date">Sept 2021 – May 2024</div>
-            </div>
+    async function loadMainContent() {
+      const mountNode = document.getElementById("main-content");
+      if (!mountNode) return;
 
-            <div class="exp-item">
-                <div class="exp-details">
-                    <strong>Guizhou University of Finance and Economics</strong>
-                    <div class="role">B.S. in Computer Science and Technology</div>
-                </div>
-                <div class="exp-date">Sept 2017 – May 2021</div>
-            </div>
-        </section>
-        
-        <section id="awards">
-            <h2>Honors & Awards</h2>
-            <ul>
-                <li><strong>2022:</strong> Second Prize, HUAWEI CUP National Undergraduate IOT Design Contest (Northeastern China Division)</li>
-                <li><strong>2022:</strong> Third Prize, 17th China Postgraduate Electronic Design Competition (Northeast Division)</li>
-            </ul>
-        </section>
+      try {
+        const response = await fetch("content/main.md");
+        if (!response.ok) {
+          throw new Error("Failed to load content/main.md");
+        }
+        const markdown = await response.text();
+        mountNode.innerHTML = marked.parse(markdown);
+      } catch (error) {
+        mountNode.innerHTML = "<p>Failed to load main content.</p>";
+      }
+    }
 
-        <footer>
-            <p>&copy; 2026 Zhiwen Ruan. Powered by GitHub Pages.</p>
-        </footer>
-    </div>
-
+    (async () => {
+      await loadMainContent();
+      initNavObserver();
+    })();
+  </script>
 </body>
 </html>
