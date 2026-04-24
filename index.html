@@ -13,6 +13,7 @@
       --accent-bg: #fdf2f8;
       --border-color: #f0f0f0;
       --bg-soft: #f7f8fc;
+      --bg-tint: #fdf2f8;
       --card-bg: #ffffff;
     }
 
@@ -90,7 +91,13 @@
       text-decoration: none;
     }
 
-    .sidebar-nav a:hover,
+    .sidebar-nav a:hover {
+      color: #9d174d;
+      background: #fdf2f8;
+      border-color: #fbcfe8;
+      text-decoration: none;
+    }
+
     .sidebar-nav a.active {
       color: #9d174d;
       background: #fdf2f8;
@@ -179,6 +186,25 @@
       background: #fdf2f8;
       color: #9d174d;
       text-decoration: none;
+    }
+
+    .hobby-block {
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .hobby-text {
+      margin: 0;
+      color: #6b7280;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hobby-text + .hobby-text {
+      margin-top: 4px;
     }
 
     h1, h2, h3 {
@@ -298,6 +324,25 @@
       border-color: #e5e7eb;
     }
 
+    .paper-image-container {
+      flex: 0 0 220px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #f3f4f6;
+      background: #fafafa;
+    }
+
+    .paper-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .paper-card:hover .paper-image-container img {
+      transform: scale(1.02);
+    }
+
     .paper-content {
       flex: 1;
       display: flex;
@@ -378,12 +423,106 @@
       color: #ffffff;
     }
 
+    .paper-btn-secondary {
+      background: #fff;
+      border-color: #f2c8df;
+      color: #9d174d;
+    }
+
+    .paper-btn-secondary:hover {
+      background: #fdf2f8;
+      border-color: #f2c8df;
+      color: #9d174d;
+    }
+
+    .subsection-title {
+      font-size: 1.2rem;
+      border: none;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      padding-bottom: 0;
+    }
+
+    .muted-note {
+      font-size: 0.84rem;
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    .teaching-note {
+      color: #4b5563;
+      margin-bottom: 10px;
+    }
+
+    .mini-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .mini-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-left-color: var(--accent-color);
+    }
+
+    .mini-card-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--primary-text);
+      margin-bottom: 4px;
+    }
+
+    .mini-card-authors {
+      font-size: 0.84rem;
+      color: var(--secondary-text);
+      margin-bottom: 4px;
+    }
+
+    .mini-card-authors strong {
+      color: var(--primary-text);
+    }
+
+    .mini-card-status {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #6b7280;
+    }
+
+    .company-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      padding: 2px;
+      flex-shrink: 0;
+    }
+
+    .exp-org {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 768px) {
       .paper-card {
         flex-direction: column;
         align-items: flex-start;
         padding: 14px;
         gap: 12px;
+      }
+
+      .paper-image-container {
+        flex: 100%;
+        width: 100%;
+        max-width: 100%;
       }
     }
 
@@ -418,23 +557,29 @@
       <p class="sidebar-title">Navigate</p>
       <ul>
         <li><a href="#about-me">About</a></li>
-        <li><a href="#research-interests">Research</a></li>
+        <li><a href="#news">News</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#working-papers">Working Papers</a></li>
         <li><a href="#internships">Internships</a></li>
         <li><a href="#educations">Educations</a></li>
         <li><a href="#honors">Honors</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#services">Services</a></li>
       </ul>
     </aside>
 
     <main class="content">
       <header class="profile-header">
-        <img class="profile-avatar" src="image.jpg" alt="Zhiwen Ruan avatar" onerror="this.src='https://ui-avatars.com/api/?name=Zhiwen+Ruan&background=0D8ABC&color=fff&size=150'">
+        <img class="profile-avatar" src="images/me.jpg" alt="Zhiwen Ruan avatar" onerror="this.src='https://ui-avatars.com/api/?name=Zhiwen+Ruan&background=0D8ABC&color=fff&size=150'">
         <div>
           <h1 class="profile-name">Zhiwen Ruan (阮志文)</h1>
           <p class="profile-role">Ph.D. Candidate at SUSTech</p>
-          <p class="profile-research"><span class="label-strong">Research:</span> Reasoning LLM · Multimodal LLM · Embodied AI · Control Science</p>
+          <p class="profile-research"><span class="label-strong">Research:</span> Reasoning LLM · Multimodal LLM · Embodied AI</p>
+          <div class="hobby-block">
+            <p class="hobby-text"><span class="label-strong">Current Position:</span> Research Intern at Alibaba Cloud</p>
+          </div>
           <div class="quick-links">
-            <a class="quick-link" href="mailto:1434800673@qq.com">Email</a>
+            <a class="quick-link" href="mailto:12431111@mail.sustech.edu.cn">Email</a>
             <a class="quick-link" href="https://github.com/zwRuan" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="quick-link" href="#publications">Publications</a>
           </div>
