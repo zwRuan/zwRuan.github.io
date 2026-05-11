@@ -2,7 +2,7 @@
 
 <p class="lead">
   Here is <strong>Zhiwen Ruan (阮志文)</strong>. I am currently a second-year <strong>Ph.D. Candidate</strong> in the Department of
-  Computer Science and Engineering at <strong>Southern University of Science and Technology</strong>, supervised by
+  Statistics and Data Science at <strong>Southern University of Science and Technology</strong>, supervised by
   Dr. <a href="https://ghchen.me/" target="_blank" rel="noopener noreferrer">Guanhua Chen</a>.
 </p>
 
