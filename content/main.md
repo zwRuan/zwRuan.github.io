@@ -13,7 +13,7 @@
 
 <h1 id="news" class="section-title">🔥 News</h1>
 <ul class="modern-list">
-  <li><span class="modern-list-date">2026.04</span><span class="modern-list-content"><em>SAFT</em> was accepted to <strong>KDD 2026</strong>.</span></li>
+  <li><span class="modern-list-date">2026.04</span><span class="modern-list-content"><em>SAFT</em> was accepted to <strong>KDD 2026 (research track)</strong> (CCF-A).</span></li>
   <li><span class="modern-list-date">2026.04</span><span class="modern-list-content"><em>Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation</em> was accepted to <strong>RSS 2026</strong>.</span></li>
   <li><span class="modern-list-date">2026.04</span><span class="modern-list-content">Two papers, <em>GIFT</em> and <em>VFA</em>, were accepted to <strong>Main of ACL 2026</strong> (CCF-A).</span></li>
   <li><span class="modern-list-date">2026.01</span><span class="modern-list-content"><em>Compound-QA</em> was accepted to <strong>ICASSP 2026</strong> (CCF-B).</span></li>
@@ -31,7 +31,7 @@
   <div class="paper-content">
     <div class="paper-title">SAFT: Safety-Preserving Adaptation via Fine-Tuning Transfer for Large Language Models</div>
     <div class="paper-authors"><strong>Zhiwen Ruan</strong>, Yan Yang, Zhuocheng Liang, Yun Chen, Guanhua Chen</div>
-    <div class="paper-meta"><span class="conf-badge">KDD 2026</span></div>
+    <div class="paper-meta"><span class="conf-badge">KDD 2026</span><span class="paper-status">Research Track (CCF-A)</span></div>
   </div>
 </div>
 
