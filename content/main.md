@@ -177,6 +177,7 @@
 
 <h1 id="honors" class="section-title">🎖 Honors and Awards</h1>
 <ul class="modern-list">
+  <li><span class="modern-list-date">2026</span><span class="modern-list-content">ICML 2026 Gold Reviewer Award</span></li>
   <li><span class="modern-list-date">2022</span><span class="modern-list-content">Second Prize, HUAWEI CUP National Undergraduate IOT Design Contest (Northeastern China Division)</span></li>
   <li><span class="modern-list-date">2022</span><span class="modern-list-content">Third Prize, 17th China Postgraduate Electronic Design Competition (Northeast Division)</span></li>
 </ul>
