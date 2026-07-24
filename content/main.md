@@ -136,12 +136,12 @@
 <div class="mini-card">
   <div class="mini-card-title">Enhancing Large Language Model Reasoning via Selective Critical Token Fine-Tuning</div>
   <div class="mini-card-authors"><strong>Zhiwen Ruan</strong>, Yixia Li, He Zhu, Yun Chen, Peng Li, Yang Liu, Guanhua Chen</div>
-  <div class="mini-card-status">Working paper</div>
+  <div class="mini-card-status">Under Review at IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)</div>
 </div>
 <div class="mini-card">
   <div class="mini-card-title">Unveiling Over-Memorization in Finetuning LLMs for Reasoning Tasks</div>
   <div class="mini-card-authors"><strong>Zhiwen Ruan</strong>, Yun Chen, Yutao Hou, Peng Li, Yang Liu, Guanhua Chen</div>
-  <div class="mini-card-status">Working paper</div>
+  <div class="mini-card-status">Under Review at IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</div>
 </div>
 
 <h1 id="internships" class="section-title">💻 Internships</h1>
@@ -192,6 +192,8 @@
 
 <h1 id="services" class="section-title">🤝 Academic Services</h1>
 <ul class="modern-list">
+  <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">AAAI 2027</span></li>
+  <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">EMNLP 2026</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ICML 2026</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ICLR 2026 Workshop LLA</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ACL ARR 2025 October</span></li>
