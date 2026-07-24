@@ -24,7 +24,7 @@
   <li><span class="modern-list-date">2024.12</span><span class="modern-list-content">Joined Alibaba IDC as a <strong>Research Intern</strong>.</span></li>
 </ul>
 
-<h1 id="publications" class="section-title">📝 Publications</h1>
+<h1 id="first-author-publications" class="section-title">📝 First-Author Publications</h1>
 
 <div class="paper-card">
   <div class="paper-image-container"><img src="images/SAFT.png" alt="SAFT figure"></div>
@@ -32,15 +32,6 @@
     <div class="paper-title">SAFT: Safety-Preserving Adaptation via Fine-Tuning Transfer for Large Language Models</div>
     <div class="paper-authors"><strong>Zhiwen Ruan</strong>, Yan Yang, Zhuocheng Liang, Yun Chen, Guanhua Chen</div>
     <div class="paper-meta"><span class="conf-badge">KDD 2026</span><span class="paper-status">Research Track (CCF-A)</span></div>
-  </div>
-</div>
-
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/smodp.png" alt="SSMoE figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation</div>
-    <div class="paper-authors">Chengyu Deng, Guanqi Chen, Yizhou Chen, Zejia Liu, <strong>Zhiwen Ruan</strong>, Guanhua Chen, Jia Pan</div>
-    <div class="paper-meta"><span class="conf-badge">RSS 2026</span></div>
   </div>
 </div>
 
@@ -53,6 +44,43 @@
     <div class="paper-links">
       <a href="https://github.com/zwRuan/gift" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
+  </div>
+</div>
+
+<div class="paper-card">
+  <div class="paper-image-container"><img src="images/g2.png" alt="G2 figure"></div>
+  <div class="paper-content">
+    <div class="paper-title">G2: Guided Generation for Enhanced Output Diversity in LLMs</div>
+    <div class="paper-authors"><strong>Zhiwen Ruan</strong>, Yixia Li, Yefeng Liu, Yun Chen, Weihua Luo, Peng Li, Yang Liu, Guanhua Chen</div>
+    <div class="paper-meta"><span class="conf-badge">EMNLP 2025</span><span class="paper-status">Main Conference Long Paper (CCF-B, THU-A)</span></div>
+    <div class="paper-links">
+      <a href="https://aclanthology.org/2025.emnlp-main.713/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
+      <a href="https://github.com/zwRuan/emnlp25-g2" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+  </div>
+</div>
+
+<div class="paper-card">
+  <div class="paper-image-container"><img src="images/layalign.png" alt="LayAlign figure"></div>
+  <div class="paper-content">
+    <div class="paper-title">LayAlign: Enhancing Multilingual Reasoning in Large Language Models via Layer-Wise Adaptive Fusion and Alignment Strategy</div>
+    <div class="paper-authors"><strong>Zhiwen Ruan<sup>*</sup></strong>, Yixia Li<sup>*</sup>, He Zhu, Longyue Wang, Weihua Luo, Kaifu Zhang, Yun Chen, Guanhua Chen</div>
+    <div class="paper-meta"><span class="conf-badge">Findings of NAACL 2025</span><span class="paper-status">Long Paper</span></div>
+    <div class="paper-links">
+      <a href="https://aclanthology.org/2025.findings-naacl.81/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
+      <a href="https://github.com/zwRuan/LayAlign" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+  </div>
+</div>
+
+<h1 id="coauthored-publications" class="section-title">📝 Co-authored Publications</h1>
+
+<div class="paper-card">
+  <div class="paper-image-container"><img src="images/smodp.png" alt="SSMoE figure"></div>
+  <div class="paper-content">
+    <div class="paper-title">Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation</div>
+    <div class="paper-authors">Chengyu Deng, Guanqi Chen, Yizhou Chen, Zejia Liu, <strong>Zhiwen Ruan</strong>, Guanhua Chen, Jia Pan</div>
+    <div class="paper-meta"><span class="conf-badge">RSS 2026</span></div>
   </div>
 </div>
 
@@ -81,19 +109,6 @@
 </div>
 
 <div class="paper-card">
-  <div class="paper-image-container"><img src="images/g2.png" alt="G2 figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">G2: Guided Generation for Enhanced Output Diversity in LLMs</div>
-    <div class="paper-authors"><strong>Zhiwen Ruan</strong>, Yixia Li, Yefeng Liu, Yun Chen, Weihua Luo, Peng Li, Yang Liu, Guanhua Chen</div>
-    <div class="paper-meta"><span class="conf-badge">EMNLP 2025</span><span class="paper-status">Main Conference Long Paper (CCF-B, THU-A)</span></div>
-    <div class="paper-links">
-      <a href="https://aclanthology.org/2025.emnlp-main.713/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
-      <a href="https://github.com/zwRuan/emnlp25-g2" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
-    </div>
-  </div>
-</div>
-
-<div class="paper-card">
   <div class="paper-image-container"><img src="images/fanno.png" alt="FANNO figure"></div>
   <div class="paper-content">
     <div class="paper-title">Fanno: Augmenting High-Quality Instruction Data with Open-Sourced LLMs Only</div>
@@ -115,19 +130,6 @@
     <div class="paper-links">
       <a href="https://aclanthology.org/2025.findings-acl.911/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
       <a href="https://github.com/sustech-nlp/Tag-Instruct" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
-    </div>
-  </div>
-</div>
-
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/layalign.png" alt="LayAlign figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">LayAlign: Enhancing Multilingual Reasoning in Large Language Models via Layer-Wise Adaptive Fusion and Alignment Strategy</div>
-    <div class="paper-authors"><strong>Zhiwen Ruan<sup>*</sup></strong>, Yixia Li<sup>*</sup>, He Zhu, Longyue Wang, Weihua Luo, Kaifu Zhang, Yun Chen, Guanhua Chen</div>
-    <div class="paper-meta"><span class="conf-badge">Findings of NAACL 2025</span><span class="paper-status">Long Paper</span></div>
-    <div class="paper-links">
-      <a href="https://aclanthology.org/2025.findings-naacl.81/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
-      <a href="https://github.com/zwRuan/LayAlign" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
   </div>
 </div>
