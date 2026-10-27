@@ -1,7 +1,7 @@
 <h1 id="about-me" class="section-title">🌟 About Me</h1>
 
 <p class="lead">
-  Here is <strong>Zhiwen Ruan (阮志文)</strong>. I am currently a second-year <strong>Ph.D. Candidate</strong> in the Department of
+  Here is <strong>Zhiwen Ruan (阮志文)</strong>. I am currently a third-year <strong>Ph.D. Candidate</strong> in the Department of
   Statistics and Data Science at <strong>Southern University of Science and Technology</strong>, supervised by
   Dr. <a href="https://ghchen.me/" target="_blank" rel="noopener noreferrer">Guanhua Chen</a>.
 </p>
@@ -13,6 +13,7 @@
 
 <h1 id="news" class="section-title">🔥 News</h1>
 <ul class="modern-list">
+  <li><span class="modern-list-date">2026.10</span><span class="modern-list-content"><em>AlignDiff</em> was accepted to <strong>Findings of EMNLP 2026</strong>.</span></li>
   <li><span class="modern-list-date">2026.04</span><span class="modern-list-content"><em>SAFT</em> was accepted to <strong>KDD 2026 (research track)</strong> (CCF-A).</span></li>
   <li><span class="modern-list-date">2026.04</span><span class="modern-list-content"><em>Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation</em> was accepted to <strong>RSS 2026</strong>.</span></li>
   <li><span class="modern-list-date">2026.04</span><span class="modern-list-content">Two papers, <em>GIFT</em> and <em>VFA</em>, were accepted to <strong>Main of ACL 2026</strong> (CCF-A).</span></li>
@@ -75,63 +76,40 @@
 
 <h1 id="coauthored-publications" class="section-title">📝 Co-authored Publications</h1>
 
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/smodp.png" alt="SSMoE figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation</div>
-    <div class="paper-authors">Chengyu Deng, Guanqi Chen, Yizhou Chen, Zejia Liu, <strong>Zhiwen Ruan</strong>, Guanhua Chen, Jia Pan</div>
-    <div class="paper-meta"><span class="conf-badge">RSS 2026</span></div>
-  </div>
+<div class="mini-card">
+  <div class="mini-card-title">AlignDiff: Exploiting Model-Intrinsic Information for Better Preference Data Selection</div>
+  <div class="mini-card-authors">Peng Lai<sup>*</sup>, He Zhu<sup>*</sup>, <strong>Zhiwen Ruan</strong>, Dongdong Zhang, Yun Chen, Peng Li, Furu Wei, Yang Liu, Guanhua Chen</div>
+  <div class="mini-card-status">Findings of EMNLP 2026</div>
 </div>
 
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/vfa.png" alt="VFA figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">VFA: Empoweing Multilingual MLLMs via Vision-Free Adaptation</div>
-    <div class="paper-authors">Yixia Li, Yaqing Shi, <strong>Zhiwen Ruan</strong>, Dongdong Zhang, Lingjie Jiang, Shaohan Huang, Yun Chen, Guanhua Chen, Furu Wei</div>
-    <div class="paper-meta"><span class="conf-badge">ACL 2026</span><span class="paper-status">Main Conference Long Paper (CCF-A)</span></div>
-    <div class="paper-links">
-      <span class="paper-btn">Download PDF</span>
-    </div>
-  </div>
+<div class="mini-card">
+  <div class="mini-card-title">Semantically Structured Mixture-of-Experts for Compositional Robotic Manipulation</div>
+  <div class="mini-card-authors">Chengyu Deng, Guanqi Chen, Yizhou Chen, Zejia Liu, <strong>Zhiwen Ruan</strong>, Guanhua Chen, Jia Pan</div>
+  <div class="mini-card-status">RSS 2026</div>
 </div>
 
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/compoundqa.png" alt="Compound-QA figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">Compound-QA: A Benchmark for Evaluating LLMs on Compound Questions</div>
-    <div class="paper-authors">Yutao Hou, Yajing Luo, <strong>Zhiwen Ruan</strong>, Hongru Wang, Weifeng Ge, Yun Chen, Guanhua Chen<sup>*</sup>.</div>
-    <div class="paper-meta"><span class="conf-badge">ICASSP 2026</span><span class="paper-status">CCF-B</span></div>
-    <div class="paper-links">
-      <a href="https://arxiv.org/abs/2411.10163" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
-    </div>
-  </div>
+<div class="mini-card">
+  <div class="mini-card-title">VFA: Empowering Multilingual MLLMs via Vision-Free Adaptation</div>
+  <div class="mini-card-authors">Yixia Li, Yaqing Shi, <strong>Zhiwen Ruan</strong>, Dongdong Zhang, Lingjie Jiang, Shaohan Huang, Yun Chen, Guanhua Chen, Furu Wei</div>
+  <div class="mini-card-status">Main Conference, ACL 2026 (CCF-A)</div>
 </div>
 
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/fanno.png" alt="FANNO figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">Fanno: Augmenting High-Quality Instruction Data with Open-Sourced LLMs Only</div>
-    <div class="paper-authors">He Zhu, Yifan Ding, Yicheng Tao, <strong>Zhiwen Ruan</strong>, Yixia Li, Wenjia Zhang, Yun Chen, Guanhua Chen<sup>*</sup>.</div>
-    <div class="paper-meta"><span class="conf-badge">Findings of ACL 2025</span><span class="paper-status">Long Paper</span></div>
-    <div class="paper-links">
-      <a href="https://aclanthology.org/2025.findings-acl.906/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
-      <a href="https://github.com/sustech-nlp/FANNO" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
-    </div>
-  </div>
+<div class="mini-card">
+  <div class="mini-card-title">Compound-QA: A Benchmark for Evaluating LLMs on Compound Questions</div>
+  <div class="mini-card-authors">Yutao Hou, Yajing Luo, <strong>Zhiwen Ruan</strong>, Hongru Wang, Weifeng Ge, Yun Chen, Guanhua Chen<sup>*</sup></div>
+  <div class="mini-card-status">ICASSP 2026 (CCF-B)</div>
 </div>
 
-<div class="paper-card">
-  <div class="paper-image-container"><img src="images/taginstruct.png" alt="Tag-Instruct figure"></div>
-  <div class="paper-content">
-    <div class="paper-title">Tag-Instruct: Controlled Instruction Complexity Enhancement through Structure-based Augmentation</div>
-    <div class="paper-authors">He Zhu, <strong>Zhiwen Ruan</strong>, Junyou Su, Xingwei He, Yun Chen, Wenjia Zhang<sup>*</sup>, Guanhua Chen<sup>*</sup>.</div>
-    <div class="paper-meta"><span class="conf-badge">Findings of ACL 2025</span><span class="paper-status">Long Paper</span></div>
-    <div class="paper-links">
-      <a href="https://aclanthology.org/2025.findings-acl.911/" class="paper-btn paper-btn-primary" target="_blank" rel="noopener noreferrer">Paper</a>
-      <a href="https://github.com/sustech-nlp/Tag-Instruct" class="paper-btn paper-btn-secondary" target="_blank" rel="noopener noreferrer">Code</a>
-    </div>
-  </div>
+<div class="mini-card">
+  <div class="mini-card-title">FANNO: Augmenting High-Quality Instruction Data with Open-Sourced LLMs Only</div>
+  <div class="mini-card-authors">He Zhu, Yifan Ding, Yicheng Tao, <strong>Zhiwen Ruan</strong>, Yixia Li, Wenjia Zhang, Yun Chen, Guanhua Chen<sup>*</sup></div>
+  <div class="mini-card-status">Findings of ACL 2025 (Long Paper)</div>
+</div>
+
+<div class="mini-card">
+  <div class="mini-card-title">Tag-Instruct: Controlled Instruction Complexity Enhancement through Structure-based Augmentation</div>
+  <div class="mini-card-authors">He Zhu, <strong>Zhiwen Ruan</strong>, Junyou Su, Xingwei He, Yun Chen, Wenjia Zhang<sup>*</sup>, Guanhua Chen<sup>*</sup></div>
+  <div class="mini-card-status">Findings of ACL 2025 (Long Paper)</div>
 </div>
 
 <h2 id="working-papers" class="section-title subsection-title">Working Papers</h2>
@@ -143,7 +121,7 @@
 <div class="mini-card">
   <div class="mini-card-title">Unveiling Over-Memorization in Finetuning LLMs for Reasoning Tasks</div>
   <div class="mini-card-authors"><strong>Zhiwen Ruan</strong>, Yun Chen, Yutao Hou, Peng Li, Yang Liu, Guanhua Chen</div>
-  <div class="mini-card-status">Under Review at IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</div>
+  <div class="mini-card-status">Under Review at IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)</div>
 </div>
 
 <h1 id="internships" class="section-title">💻 Internships</h1>
@@ -179,6 +157,10 @@
 
 <h1 id="honors" class="section-title">🎖 Honors and Awards</h1>
 <ul class="modern-list">
+  <li><span class="modern-list-date">2026</span><span class="modern-list-content"><strong>National Scholarship</strong>, Southern University of Science and Technology</span></li>
+  <li><span class="modern-list-date">2026</span><span class="modern-list-content"><strong>BYD Scholarship</strong>, Southern University of Science and Technology</span></li>
+  <li><span class="modern-list-date">2026</span><span class="modern-list-content">Graduate Academic Scholarship (Special Class, Top 20%), Southern University of Science and Technology</span></li>
+  <li><span class="modern-list-date">2024–2025</span><span class="modern-list-content">Outstanding Graduate Student, Southern University of Science and Technology</span></li>
   <li><span class="modern-list-date">2026</span><span class="modern-list-content">ICML 2026 Gold Reviewer Award</span></li>
   <li><span class="modern-list-date">2022</span><span class="modern-list-content">Second Prize, HUAWEI CUP National Undergraduate IOT Design Contest (Northeastern China Division)</span></li>
   <li><span class="modern-list-date">2022</span><span class="modern-list-content">Third Prize, 17th China Postgraduate Electronic Design Competition (Northeast Division)</span></li>
@@ -195,8 +177,10 @@
 <h1 id="services" class="section-title">🤝 Academic Services</h1>
 <ul class="modern-list">
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">AAAI 2027</span></li>
+  <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ICLR 2027</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">EMNLP 2026</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ICML 2026</span></li>
+  <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ACL ARR 2026 October</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ICLR 2026 Workshop LLA</span></li>
   <li><span class="modern-list-date">Reviewer</span><span class="modern-list-content">ACL ARR 2025 October</span></li>
 </ul>
